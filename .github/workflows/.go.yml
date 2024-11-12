@@ -18,12 +18,12 @@ jobs:
         run: |
             git clone https://github.com/khulnasoft/cipherguard_docker.git ../cipherguard_docker
             cd ../cipherguard_docker
-            docker-compose -f docker-compose/docker-compose-ce.yaml up -d
+            docker compose -f docker-compose/docker-compose-ce.yaml up -d
             docker ps -a
       - name: "Test"
         run: |
-            docker exec docker-compose_cipherguard_1 sh -c '/usr/bin/wait-for.sh -t 30 localhost:443'
-            output=$(docker exec docker-compose_cipherguard_1 sh -c 'su -m -c "/usr/share/php/cipherguard/bin/cake \
+            docker exec docker-compose-cipherguard-1 sh -c '/usr/bin/wait-for.sh -t 30 localhost:443'
+            output=$(docker exec docker-compose-cipherguard-1 sh -c 'su -m -c "/usr/share/php/cipherguard/bin/cake \
               cipherguard register_user \
               -u your@email.com \
               -f yourname \

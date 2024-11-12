@@ -18,7 +18,7 @@ To use the API package, please read the [Cipherguard API docs](https://help.khul
 
 PR's are welcome. But be gentle: if it's something bigger or fundamental: please [create an issue](https://github.com/khulnasoft/go-cipherguard/issues/new) and ask first.
 
-Disclaimer: This project is community driven and not associated with KhulnaSoft Ltd
+Disclaimer: This project is community driven and not associated with Cipherguard SA
 
 # Install
 
